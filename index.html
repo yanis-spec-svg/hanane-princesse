@@ -10,55 +10,60 @@
 
 <div class="container">
 
-  <!-- مرحباً بالزوار -->
+  <!-- Welcome -->
   <div id="welcome" class="fade">
-    <h1>Welcome to the Princess Garden 🌸💖</h1>
+    <h1>Welcome to the Princess Garden 🌸💖🌷</h1>
     <button onclick="next('riddle')">Next</button>
   </div>
 
-  <!-- الألغاز -->
+  <!-- Riddle Clues -->
   <div id="riddle" class="hidden">
-    <h2>I have a riddle for you</h2>
-    <button onclick="next('clue1')">First clue</button>
+    <h2>I have a riddle for you 🤔</h2>
+    <button onclick="next('clue1')">First Clue</button>
   </div>
 
   <div id="clue1" class="hidden">
-    <p>First clue: This thing has made me smile a lot recently 😊</p>
-    <button onclick="next('clue2')">Second clue</button>
+    <p>This thing has made me smile a lot recently 😊</p>
+    <button onclick="next('clue2')">Second Clue</button>
   </div>
 
   <div id="clue2" class="hidden">
-    <p>Second clue: This thing is not a place nor something I own 🌟</p>
-    <button onclick="next('clue3')">Third clue</button>
+    <p>This thing is not a place or something I own 🏡❌</p>
+    <button onclick="next('clue3')">Third Clue</button>
   </div>
 
   <div id="clue3" class="hidden">
-    <p>Third clue: This thing loves surprises and chocolate 🍫</p>
+    <p>This thing loves surprises and chocolate 🍫🎁</p>
     <button id="showAnswerBtn">Show the answer</button>
   </div>
 
-  <!-- الرسالة الكبيرة بعد فتح الهدية -->
+  <!-- Gift & Message -->
   <div id="message" class="hidden">
-    <h2 id="answerTitle">It's you 🥰</h2>
-    <p id="confessionText"></p>
-    <button onclick="next('promises')">My four promises</button>
-    <button id="sooBtn">Soo... 👆</button>
-    <p style="font-size:16px; margin-top:5px;">Press here</p>
+    <h2>🎁 Tap the gift to open</h2>
+    <div id="giftBox" onclick="next('confession')">🎁</div>
   </div>
 
-  <!-- الوعود -->
+  <div id="confession" class="hidden">
+    <p id="confessionText" class="typing"></p>
+    <button id="promisesBtn">My Four Promises</button>
+  </div>
+
+  <!-- Promises -->
   <div id="promises" class="hidden">
-    <p>1️⃣ I will always respect you</p>
-    <p>2️⃣ I will never ignore you</p>
-    <p>3️⃣ I will always take care of you</p>
-    <p>4️⃣ I will always be there for you</p>
-    <button onclick="next('finalMessage')">Next</button>
+    <ul>
+      <li>I will always respect you 💖</li>
+      <li>I will never ignore you 🌸</li>
+      <li>I will always take care of you 🌷</li>
+      <li>I will always be there for you 🏰</li>
+    </ul>
+    <button id="sooBtn">Soo...</button>
+    <p>Press here ⬇️</p>
   </div>
 
-  <!-- الرسالة النهائية -->
+  <!-- Final Question -->
   <div id="finalMessage" class="hidden">
-    <h1>💖 For my princess 💖</h1>
-    <p>You are amazing and I really enjoy having you in my life!</p>
+    <h1>It's you 🥰👑</h1>
+    <p>Would you be my pretty princess? 💖🌷</p>
   </div>
 
 </div>
