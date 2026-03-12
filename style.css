@@ -1,58 +1,88 @@
-/* عام */
-body{
-  margin:0;
+/* الجسم والخلفية */
+body {
+  margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: url('https://w0.peakpx.com/wallpaper/812/190/HD-wallpaper-spring-field-nature-spring-tulips-field.jpg') no-repeat center center fixed;
-  background-size: cover;
-  color:white;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  min-height:100vh;
-  overflow:hidden;
+  background: url('https://w0.peakpx.com/wallpaper/812/190/HD-wallpaper-spring-field-nature-spring-tulips-field.jpg') center/cover no-repeat;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
+/* المستطيل الرئيسي */
 .container {
+  width: 80%;
   max-width: 700px;
-  width: 85%;
   padding: 25px;
-  background: rgba(50, 50, 50, 0.9); /* داكن يغطي الخلفية */
+  background: rgba(245, 245, 220, 0.85); /* بيج فاتح مع شفافية */
   border-radius: 20px;
-  box-shadow: 0 0 30px rgba(0,0,0,0.4);
-  margin: auto;
   text-align: center;
   color: black; /* الكتابة سوداء */
+  position: relative;
+  z-index: 2;
 }
+
+/* إخفاء العناصر */
+.hidden {
+  display: none;
+}
+
+/* تأثير Fade عند الظهور */
+.fade {
+  animation: fade 1s;
+}
+
+@keyframes fade {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* الأزرار */
 button {
-  padding: 16px 28px;
-  font-size: 20px;
-  border: none;
+  padding: 14px 28px;
+  font-size: 18px;
   border-radius: 15px;
+  border: none;
   cursor: pointer;
-  margin-top: 20px;
-  transition: 0.3s;
+  margin-top: 15px;
   background: linear-gradient(45deg, #ff7eb3, #ff758c);
   color: white;
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: 0.3s;
 }
-button:hover{
+
+button:hover {
   transform: scale(1.1);
   box-shadow: 0 6px 20px rgba(0,0,0,0.4);
 }
 
-.hidden{display:none;}
-.fade{animation:fade 1s;}
-@keyframes fade{from{opacity:0;transform:translateY(20px);} to{opacity:1;transform:translateY(0);}}
-
-.typing{display:inline; white-space:normal; overflow:hidden; line-height:1.5; font-size:18px;}
-
-/* سقوط الزهور والقلوب */
-.falling{
-  position:absolute;
-  top:-50px;
-  z-index:1;
-  opacity:0.9;
-  animation:fall linear infinite;
+/* العناصر المتساقطة (زهور وقلوب) */
+.falling {
+  position: absolute;
+  pointer-events: none; /* لا تمنع النقر على الأزرار */
+  z-index: 1;
 }
-@keyframes fall{0%{top:-50px;} 100%{top:100vh;}}
+
+/* الرسالة الكبيرة */
+#message p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-top: 20px;
+  text-align: justify;
+}
+
+/* الوعود */
+#promises ol {
+  margin-top: 20px;
+  text-align: left;
+  font-size: 18px;
+}
+
+/* الهدية */
+#giftBox {
+  font-size: 120px;
+  cursor: pointer;
+  margin-top: 20px;
+}
 
