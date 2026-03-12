@@ -19,8 +19,17 @@ const showAnswerBtn = document.getElementById('showAnswerBtn');
 let escapeCount = 0;
 showAnswerBtn.addEventListener('mouseover', ()=>{
   if(escapeCount<2){
-    const maxX = window.innerWidth - showAnswerBtn.offsetWidth;
-    const maxY = window.innerHeight - showAnswerBtn.offsetHeight;
+    const container = document.querySelector('.container');
+
+const maxX = container.clientWidth - showAnswerBtn.offsetWidth;
+const maxY = container.clientHeight - showAnswerBtn.offsetHeight;
+
+const newX = Math.random() * maxX;
+const newY = Math.random() * maxY;
+
+showAnswerBtn.style.position = 'absolute';
+showAnswerBtn.style.left = newX + 'px';
+showAnswerBtn.style.top = newY + 'px';
     const newX = Math.random()*maxX;
     const newY = Math.random()*maxY;
     showAnswerBtn.style.position='absolute';
@@ -62,3 +71,4 @@ function moveFallingImages(x){
 }
 document.addEventListener('mousemove', e=>moveFallingImages(e.clientX));
 document.addEventListener('touchmove', e=>moveFallingImages(e.touches[0].clientX));
+
