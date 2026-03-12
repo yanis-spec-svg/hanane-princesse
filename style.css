@@ -85,3 +85,21 @@ button:hover {
   cursor: pointer;
   margin-top: 20px;
 }
+/* سقوط الزهور */
+.falling {
+  position: fixed;
+  top: -50px;
+  pointer-events: none;
+  z-index: 1;
+  animation: fall linear infinite;
+}
+
+/* حركة السقوط */
+@keyframes fall {
+  0% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(110vh);
+  }
+}
