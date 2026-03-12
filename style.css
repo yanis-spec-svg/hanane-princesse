@@ -1,6 +1,10 @@
+/* ==============================
+   CSS لموقع Princess Garden
+   ============================== */
+
 /* الجسم والخلفية */
 body {
-  margin: 0;
+  margin:0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: url('https://w0.peakpx.com/wallpaper/812/190/HD-wallpaper-spring-field-nature-spring-tulips-field.jpg') center/cover no-repeat;
   overflow: hidden;
@@ -15,27 +19,24 @@ body {
   width: 80%;
   max-width: 700px;
   padding: 25px;
-  background: rgba(245, 245, 220, 0.85); /* بيج فاتح مع شفافية */
+  background: #EDE3CF; /* لون البيج الذي طلبته */
   border-radius: 20px;
   text-align: center;
-  color: black; /* الكتابة سوداء */
+  color: black;
   position: relative;
   z-index: 2;
 }
 
 /* إخفاء العناصر */
-.hidden {
-  display: none;
-}
+.hidden { display: none; }
 
 /* تأثير Fade عند الظهور */
 .fade {
   animation: fade 1s;
 }
-
 @keyframes fade {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {opacity:0; transform:translateY(20px);}
+  to {opacity:1; transform:translateY(0);}
 }
 
 /* الأزرار */
@@ -46,21 +47,20 @@ button {
   border: none;
   cursor: pointer;
   margin-top: 15px;
-  background: linear-gradient(45deg, #ff7eb3, #ff758c);
+  background: linear-gradient(45deg,#ff7eb3,#ff758c);
   color: white;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  box-shadow:0 4px 15px rgba(0,0,0,0.3);
   transition: 0.3s;
 }
-
 button:hover {
   transform: scale(1.1);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+  box-shadow:0 6px 20px rgba(0,0,0,0.4);
 }
 
 /* العناصر المتساقطة (زهور وقلوب) */
 .falling {
   position: absolute;
-  pointer-events: none; /* لا تمنع النقر على الأزرار */
+  pointer-events: none;
   z-index: 1;
 }
 
@@ -85,4 +85,3 @@ button:hover {
   cursor: pointer;
   margin-top: 20px;
 }
-
