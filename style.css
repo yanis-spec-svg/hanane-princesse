@@ -2,7 +2,7 @@
 body{
   margin:0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: url('https://images.unsplash.com/photo-1618312530854-36c1d68049e7?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+  background: url('https://w0.peakpx.com/wallpaper/812/190/HD-wallpaper-spring-field-nature-spring-tulips-field.jpg') no-repeat center center fixed;
   background-size: cover;
   color:white;
   display:flex;
@@ -16,7 +16,7 @@ body{
   max-width:700px;
   width:90%;
   padding: 20px;
-  background: rgba(245, 245, 220, 0.8); /* beige */
+  background: rgba(245, 245, 220, 0.9); /* beige */
   border-radius: 20px;
   text-align:center;
   box-shadow:0 0 20px rgba(0,0,0,0.3);
@@ -43,7 +43,7 @@ button:hover{
 .fade{animation:fade 1s;}
 @keyframes fade{from{opacity:0;transform:translateY(20px);} to{opacity:1;transform:translateY(0);}}
 
-.typing{border-right:2px solid #333; display:inline; white-space:nowrap; overflow:hidden;}
+.typing{display:inline; white-space:normal; overflow:hidden; line-height:1.5; font-size:18px;}
 
 /* سقوط الزهور والقلوب */
 .falling{
