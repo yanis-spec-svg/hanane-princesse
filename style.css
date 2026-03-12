@@ -16,15 +16,15 @@ body {
 
 /* المستطيل الرئيسي */
 .container {
-  width: 80%;
-  max-width: 700px;
-  padding: 25px;
-  background: #EDE3CF; /* لون البيج الذي طلبته */
+  width: 90%;
+  max-width: 750px;
+  min-height: 500px;
+  padding: 40px;
+  background: #EDE3CF;
   border-radius: 20px;
   text-align: center;
   color: black;
   position: relative;
-  z-index: 2;
 }
 
 /* إخفاء العناصر */
@@ -108,4 +108,5 @@ button:hover {
     transform: translateY(110vh);
   }
 }
+
 
