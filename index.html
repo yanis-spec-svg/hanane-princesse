@@ -1,32 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Princess Garden</title>
-
 <link rel="stylesheet" href="style.css">
-
 </head>
-
 <body>
 
+<!-- Container Beige -->
 <div class="container">
 
-<div id="content">
+  <!-- Welcome -->
+  <div id="welcome" class="fade">
+    <h1>Welcome to the Princess Garden 🌸👑</h1>
+    <button onclick="next('riddle')">Next</button>
+  </div>
 
-<h1 id="title">Welcome to the Princess Garden 🌸👑</h1>
+  <!-- Riddle Section -->
+  <div id="riddle" class="hidden">
+    <h2>I have a riddle for you 🕵️‍♀️</h2>
+    <button onclick="next('clue1')">First clue</button>
+  </div>
 
-<p id="text"></p>
+  <!-- Clues -->
+  <div id="clue1" class="hidden">
+    <p>🌟 This thing has made me smile a lot recently 😊</p>
+    <button onclick="next('clue2')">Second clue</button>
+  </div>
 
-<button id="btn">Next</button>
+  <div id="clue2" class="hidden">
+    <p>🌟 This thing is not a place nor something I own 🏠🚫</p>
+    <button onclick="next('clue3')">Third clue</button>
+  </div>
 
-</div>
+  <div id="clue3" class="hidden">
+    <p>🌟 This thing loves surprises and chocolate 🍫🎁</p>
+    <button onclick="next('gift')">Show the answer</button>
+  </div>
+
+  <!-- Gift Box -->
+  <div id="gift" class="hidden">
+    <div id="giftBox" class="gift">
+      🎁 Tap to open
+    </div>
+  </div>
+
+  <!-- Confession Message -->
+  <div id="message" class="hidden">
+    <p id="confessionText"></p>
+    <button onclick="next('promises')">My four promises</button>
+  </div>
+
+  <!-- Promises -->
+  <div id="promises" class="hidden">
+    <ul>
+      <li>💖 I will always respect you</li>
+      <li>💖 I will never ignore you</li>
+      <li>💖 I will always take care of you</li>
+      <li>💖 I will always be there for you</li>
+    </ul>
+    <button onclick="next('final')">Soo...</button>
+    <p>Press here 👇</p>
+  </div>
+
+  <!-- Final Banner -->
+  <div id="final" class="hidden">
+    <h1>👑 Would you be my pretty princess? 👑</h1>
+  </div>
 
 </div>
 
 <script src="script.js"></script>
-
 </body>
-
 </html>
