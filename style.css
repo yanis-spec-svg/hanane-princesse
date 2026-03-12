@@ -12,27 +12,28 @@ body{
   overflow:hidden;
 }
 
-.container{
-  max-width:700px;
-  width:90%;
-  padding: 20px;
-  background: rgba(245, 245, 220, 0.9); /* beige */
+.container {
+  max-width: 700px;
+  width: 85%;
+  padding: 25px;
+  background: rgba(50, 50, 50, 0.9); /* داكن يغطي الخلفية */
   border-radius: 20px;
-  text-align:center;
-  box-shadow:0 0 20px rgba(0,0,0,0.3);
+  box-shadow: 0 0 30px rgba(0,0,0,0.4);
+  margin: auto;
+  text-align: center;
+  color: black; /* الكتابة سوداء */
 }
-
-button{
-  padding: 12px 25px;
-  font-size: 18px;
-  border:none;
+button {
+  padding: 16px 28px;
+  font-size: 20px;
+  border: none;
   border-radius: 15px;
-  cursor:pointer;
-  margin-top:15px;
-  background: linear-gradient(45deg,#ff7eb3,#ff758c);
-  color:white;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  cursor: pointer;
+  margin-top: 20px;
   transition: 0.3s;
+  background: linear-gradient(45deg, #ff7eb3, #ff758c);
+  color: white;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 button:hover{
   transform: scale(1.1);
@@ -54,3 +55,4 @@ button:hover{
   animation:fall linear infinite;
 }
 @keyframes fall{0%{top:-50px;} 100%{top:100vh;}}
+
