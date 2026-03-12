@@ -60,4 +60,36 @@ btn.style.display = "none"
 
 }
 
+
 }
+/* قلوب وورود متساقطة */
+
+const items = [
+
+"https://www.vhv.rs/dpng/d/476-4763652_pink-love-heart-png-hd-pluspn-revolving-pink.png",
+
+"https://png.pngtree.com/png-vector/20250512/ourlarge/pngtree-delicate-pink-rose-bloom-png-image_16204888.png"
+
+];
+
+function createItem(){
+
+let item = document.createElement("img")
+
+item.src = items[Math.floor(Math.random()*items.length)]
+
+item.className = "fall"
+
+item.style.left = Math.random()*100 + "vw"
+
+item.style.animationDuration = (4 + Math.random()*4) + "s"
+
+document.body.appendChild(item)
+
+setTimeout(()=>{
+item.remove()
+},8000)
+
+}
+
+setInterval(createItem,400)
