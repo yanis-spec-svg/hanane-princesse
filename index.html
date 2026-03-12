@@ -5,126 +5,60 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Princess Garden</title>
 <link rel="stylesheet" href="style.css">
-<style>
-  /* ======= CSS داخلي للعرض المباشر ======= */
-  body {
-    margin:0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: url('https://i.ibb.co/6bVfQ3t/garden-background.jpg') center/cover no-repeat;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-
-  .container {
-    width: 80%;
-    max-width: 700px;
-    padding: 25px;
-    background: rgba(50,50,50,0.85); /* بيج غامق يغطي الخلفية */
-    border-radius: 20px;
-    text-align: center;
-    color: black; /* الكتابة سوداء */
-    position: relative;
-  }
-
-  .hidden { display: none; }
-  .fade { animation: fade 1s; }
-
-  @keyframes fade {
-    from { opacity:0; transform: translateY(20px);}
-    to { opacity:1; transform: translateY(0);}
-  }
-
-  button {
-    padding: 14px 28px;
-    font-size: 18px;
-    border-radius: 15px;
-    border: none;
-    cursor: pointer;
-    margin-top: 15px;
-    background: linear-gradient(45deg,#ff7eb3,#ff758c);
-    color: white;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-    transition: 0.3s;
-  }
-
-  button:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
-  }
-
-  .falling {
-    position: absolute;
-    pointer-events: none;
-    z-index: 0;
-  }
-
-</style>
 </head>
 <body>
 
 <div class="container">
 
-  <!-- ======= مرحـلة الترحيب ======= -->
+  <!-- === الترحيب === -->
   <div id="welcome" class="fade">
     <h1>Welcome to the Princess Garden 🌸💖</h1>
-    <p>Press Next to start your adventure!</p>
-    <button onclick="next('riddleIntro')">Next</button>
+    <button onclick="next('riddle1')">Next</button>
   </div>
 
-  <!-- ======= مقدمة الألغاز ======= -->
-  <div id="riddleIntro" class="hidden">
-    <h2>I have a riddle for you 🧩</h2>
-    <button onclick="next('firstClue')">First Clue</button>
+  <!-- === الألغاز الثلاثة === -->
+  <div id="riddle1" class="hidden">
+    <h2>I have a riddle for you 🍫</h2>
+    <p>First clue: This thing has made me smile a lot recently 😊</p>
+    <button onclick="next('riddle2')">Second clue</button>
   </div>
 
-  <div id="firstClue" class="hidden">
-    <h3>First Clue:</h3>
-    <p>This thing has made me smile a lot recently 😊</p>
-    <button onclick="next('secondClue')">Second Clue</button>
+  <div id="riddle2" class="hidden">
+    <p>Second clue: This thing is not a place or something I own 🏠</p>
+    <button onclick="next('riddle3')">Third clue</button>
   </div>
 
-  <div id="secondClue" class="hidden">
-    <h3>Second Clue:</h3>
-    <p>This thing is not a place or something I own 🏠❌</p>
-    <button onclick="next('thirdClue')">Third Clue</button>
+  <div id="riddle3" class="hidden">
+    <p>Third clue: This thing loves surprises and chocolate 🍫💝</p>
+    <button id="showAnswerBtn">Show the answer</button>
   </div>
 
-  <div id="thirdClue" class="hidden">
-    <h3>Third Clue:</h3>
-    <p>This thing loves surprises and chocolate 🍫✨</p>
-    <button id="showAnswerBtn">Show the Answer</button>
-  </div>
-
-  <!-- ======= الهـدية ======= -->
+  <!-- === الهدية === -->
   <div id="gift" class="hidden">
-    <h2>🎁 Tap the gift to open!</h2>
-    <div id="giftBox" style="font-size:100px; cursor:pointer;">🎁</div>
+    <div id="giftBox">🎁</div>
+    <p>Tap to open 🎀</p>
   </div>
 
-  <!-- ======= الرسالة الكبيرة ======= -->
+  <!-- === الرسالة الكبيرة === -->
   <div id="message" class="hidden">
-    <h2>It's you 🥰</h2>
-    <p>You were just a stranger at first, someone I barely noticed. Then we talked, and somehow you felt familiar, like you had always been around. Slowly, I started sharing little pieces of myself I usually keep to myself, and you listened. You became someone I look forward to talking to, someone who brightens my days without even trying. And before I realized it, I started feeling something more than friendship—a warm admiration that keeps growing every time we talk. It's amazing how someone can quietly enter your life and make it feel brighter. I just wanted you to know... I like you, and I really enjoy having you in my life 💖</p>
-    <button id="sooBtn">My Four Promises</button>
+    <h2>It's You! 🥰</h2>
+    <p>You were just a stranger at first, someone I barely noticed. Then we talked, and somehow you felt familiar, like you had always been around. Slowly, I started sharing little pieces of myself I usually keep to myself, and you listened. You became someone I look forward to talking to, someone who brightens my days without even trying. And before I realized it, I started feeling something more than friendship—a warm admiration that keeps growing every time we talk. It's amazing how someone can quietly enter your life and make it feel brighter. I just wanted you to know... I like you, and I really enjoy having you in my life.</p>
+    <button id="promisesBtn">My Four Promises</button>
   </div>
 
-  <!-- ======= الوعود ======= -->
+  <!-- === الوعود === -->
   <div id="promises" class="hidden">
-    <h2>My Four Promises 💕</h2>
     <ol>
-      <li>I will always respect you</li>
-      <li>I will never ignore you</li>
-      <li>I will always take care of you</li>
-      <li>I will always be there for you</li>
+      <li>I will always respect you ❤️</li>
+      <li>I will never ignore you 💖</li>
+      <li>I will always take care of you 🌸</li>
+      <li>I will always be there for you 🥰</li>
     </ol>
-    <button onclick="next('finalMessage')">Soo...</button>
-    <p>Press here ⬇️</p>
+    <button id="sooBtn">Soo...</button>
+    <p>Press here 👇</p>
   </div>
 
-  <!-- ======= الرسالة النهائية ======= -->
+  <!-- === الرسالة الأخيرة === -->
   <div id="finalMessage" class="hidden">
     <h1>Would you be my pretty princess? 👑💖</h1>
   </div>
