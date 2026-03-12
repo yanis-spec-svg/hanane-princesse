@@ -9,10 +9,12 @@ body {
 }
 
 .container {
-  position: relative;
+  position: absolute; /* بدل relative */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* يوسّط عموديًا وأفقيًا */
   max-width: 700px;
   width: 90%;
-  margin: 0 auto;
   padding: 20px;
   background: rgba(245, 245, 220, 0.8); /* beige */
   border-radius: 15px;
@@ -65,4 +67,5 @@ button:hover{
   0% {transform: translateY(-50px) rotate(0deg);}
   100% {transform: translateY(110vh) rotate(360deg);}
 }
+
 
