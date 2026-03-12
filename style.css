@@ -1,101 +1,67 @@
-body{
-
-margin:0;
-padding:0;
-
-font-family:Arial;
-
-background-image:url("https://i.pinimg.com/736x/c5/3a/06/c53a061996c6d46e09d700bf3a4f4b82.jpg");
-
-background-size:cover;
-
-background-position:center;
-
-height:100vh;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url('YOUR_BACKGROUND_IMAGE_URL');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  color: white;
 }
 
-/* الإطار البيج */
-
-.container{
-
-background:#f5e6d3;
-
-padding:40px;
-
-border-radius:20px;
-
-width:600px;
-
-text-align:center;
-
-box-shadow:0px 10px 30px rgba(0,0,0,0.3);
-
+.container {
+  position: relative;
+  max-width: 700px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  background: rgba(245, 245, 220, 0.8); /* beige */
+  border-radius: 15px;
+  text-align: center;
+  z-index: 2;
 }
 
-/* النص */
-
-#text{
-
-font-size:20px;
-
-margin-top:20px;
-
-line-height:1.6;
-
+button {
+  padding: 15px 25px;
+  margin-top: 15px;
+  font-size: 18px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(45deg,#ff7eb3,#ff758c);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
 }
-
-/* الأزرار */
-
-button{
-
-margin-top:30px;
-
-padding:12px 25px;
-
-font-size:18px;
-
-border:none;
-
-border-radius:12px;
-
-background:pink;
-
-cursor:pointer;
-
-}
-
 button:hover{
-
-background:#ff6fa5;
-
-
+  transform: scale(1.1);
 }
 
-/* العناصر المتساقطة (قلوب وورود) */
-
-.fall{
-position:fixed;
-top:-50px;
-width:30px;
-pointer-events:none;
-animation:fall linear infinite;
+.hidden {display: none;}
+.fade {animation:fade 1s;}
+@keyframes fade{
+  from {opacity:0; transform:translateY(20px);}
+  to {opacity:1; transform:translateY(0);}
 }
 
-@keyframes fall{
-
-0%{
-transform:translateY(-50px) rotate(0deg);
+/* Gift box */
+.gift {
+  font-size: 80px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.gift:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
 }
 
-100%{
-transform:translateY(110vh) rotate(360deg);
+/* Falling hearts/flowers */
+.fall {
+  position: fixed;
+  top: -50px;
+  width: 30px;
+  pointer-events: none;
+  animation: fall linear infinite;
 }
-
+@keyframes fall {
+  0% {transform: translateY(-50px) rotate(0deg);}
+  100% {transform: translateY(110vh) rotate(360deg);}
 }
