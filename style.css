@@ -75,4 +75,27 @@ button:hover{
 
 background:#ff6fa5;
 
+
+}
+
+/* العناصر المتساقطة (قلوب وورود) */
+
+.fall{
+position:fixed;
+top:-50px;
+width:30px;
+pointer-events:none;
+animation:fall linear infinite;
+}
+
+@keyframes fall{
+
+0%{
+transform:translateY(-50px) rotate(0deg);
+}
+
+100%{
+transform:translateY(110vh) rotate(360deg);
+}
+
 }
