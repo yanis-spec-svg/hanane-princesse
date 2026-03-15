@@ -2,7 +2,9 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
+
 <title>Princess Garden</title>
 
 <link rel="stylesheet" href="style.css">
@@ -13,7 +15,8 @@
 
 <div class="container">
 
-<!-- الصفحة الأولى -->
+<!-- WELCOME -->
+
 <div id="welcome">
 
 <h1>Welcome to the Princess Garden 🌸</h1>
@@ -23,7 +26,8 @@
 </div>
 
 
-<!-- صفحة اللغز -->
+<!-- RIDDLE -->
+
 <div id="riddle" class="hidden">
 
 <h2>I have a riddle for you 🤔</h2>
@@ -31,9 +35,7 @@
 <p id="clueText"></p>
 
 <button onclick="showClue()">First clue</button>
-
 <button onclick="showClue()">Second clue</button>
-
 <button onclick="showClue()">Third clue</button>
 
 <br><br>
@@ -43,18 +45,23 @@
 </div>
 
 
-<!-- الهدية -->
+<!-- GIFT -->
+
 <div id="gift" class="hidden">
 
 <div class="giftBox" onclick="next('message')">
+
 🎁
+
 <p>Tap to open</p>
-</div>
 
 </div>
 
+</div>
 
-<!-- الرسالة -->
+
+<!-- MESSAGE -->
+
 <div id="message" class="hidden">
 
 <h1>it's you 🥰</h1>
@@ -86,7 +93,8 @@ I like you, and I really enjoy having you in my life. 💖
 </div>
 
 
-<!-- الوعود -->
+<!-- PROMISES -->
+
 <div id="promises" class="hidden">
 
 <h2>My promises 💌</h2>
@@ -98,14 +106,15 @@ I like you, and I really enjoy having you in my life. 💖
 
 <br>
 
-<button id="sooBtn">Soo... 👆</button>
+<button onclick="next('finalMessage')">Soo... 👆</button>
 
 <p>Press here</p>
 
 </div>
 
 
-<!-- الرسالة الأخيرة -->
+<!-- FINAL -->
+
 <div id="finalMessage" class="hidden">
 
 <h1>Would you be my pretty princess? 👑</h1>
@@ -113,7 +122,6 @@ I like you, and I really enjoy having you in my life. 💖
 </div>
 
 </div>
-
 
 <script src="script.js"></script>
 
