@@ -1,129 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Princess Garden</title>
-
 <link rel="stylesheet" href="style.css">
-
 </head>
-
 <body>
 
 <div class="container">
 
-<!-- WELCOME -->
+  <!-- Welcome Page -->
+  <div id="welcome" class="active">
+    <h1>Welcome to the Princess Garden 🌸💖</h1>
+    <button onclick="next('riddle1')">Next</button>
+  </div>
 
-<div id="welcome">
+  <!-- Riddles -->
+  <div id="riddle1">
+    <p>First clue: This thing has made me smile a lot recently 😊</p>
+    <button onclick="next('riddle2')">Next</button>
+  </div>
 
-<h1>Welcome to the Princess Garden 🌸</h1>
+  <div id="riddle2">
+    <p>Second clue: This thing is not a place or something I own 🏡❌</p>
+    <button onclick="next('riddle3')">Next</button>
+  </div>
 
-<button onclick="next('riddle')">Next</button>
+  <div id="riddle3">
+    <p>Third clue: This thing loves surprises and chocolate 🍫🎁</p>
+    <div id="answerFrame">
+      <button id="showAnswerBtn">Show the answer</button>
+    </div>
+  </div>
 
-</div>
+  <!-- Message -->
+  <div id="message">
+    <h2>It's for you 🥰</h2>
+    <p>You were just a stranger at first, someone I barely noticed. Then we talked, and somehow you felt familiar, like you had always been around. Slowly, I started sharing little pieces of myself I usually keep to myself, and you listened. You became someone I look forward to talking to, someone who brightens my days without even trying. And before I realized it, I started feeling something more than friendship—a warm admiration that keeps growing every time we talk. It's amazing how someone can quietly enter your life and make it feel brighter. I just wanted you to know... I like you, and I really enjoy having you in my life 💖</p>
+    <button id="promisesBtn">My four promises</button>
+  </div>
 
+  <!-- Promises -->
+  <div id="promises">
+    <p>1️⃣ I will always respect you</p>
+    <p>2️⃣ I will never ignore you</p>
+    <p>3️⃣ I will always take care of you</p>
+    <p>4️⃣ I will always be there for you</p>
+    <button id="sooBtn">Soo...</button>
+  </div>
 
-<!-- RIDDLE -->
-
-<div id="riddle" class="hidden">
-
-<h2>I have a riddle for you 🤔</h2>
-
-<p id="clueText"></p>
-
-<button onclick="showClue()">First clue</button>
-<button onclick="showClue()">Second clue</button>
-<button onclick="showClue()">Third clue</button>
-
-<br><br>
-
-<button id="showAnswerBtn">Show the answer</button>
-
-</div>
-
-
-<!-- GIFT -->
-
-<div id="gift" class="hidden">
-
-<div class="giftBox" onclick="next('message')">
-
-🎁
-
-<p>Tap to open</p>
-
-</div>
-
-</div>
-
-
-<!-- MESSAGE -->
-
-<div id="message" class="hidden">
-
-<h1>it's you 🥰</h1>
-
-<p>
-You were just a stranger at first, someone I barely noticed.
-Then we talked, and somehow you felt familiar,
-like you had always been around.
-
-Slowly, I started sharing little pieces of myself
-I usually keep to myself, and you listened.
-
-You became someone I look forward to talking to,
-someone who brightens my days without even trying.
-
-And before I realized it,
-I started feeling something more than friendship —
-a warm admiration that keeps growing every time we talk.
-
-It's amazing how someone can quietly enter your life
-and make it feel brighter.
-
-I just wanted you to know...
-I like you, and I really enjoy having you in my life. 💖
-</p>
-
-<button onclick="next('promises')">My four promises</button>
-
-</div>
-
-
-<!-- PROMISES -->
-
-<div id="promises" class="hidden">
-
-<h2>My promises 💌</h2>
-
-<p>I will always respect you</p>
-<p>I will never ignore you</p>
-<p>I will always take care of you</p>
-<p>I will always be there for you</p>
-
-<br>
-
-<button onclick="next('finalMessage')">Soo... 👆</button>
-
-<p>Press here</p>
-
-</div>
-
-
-<!-- FINAL -->
-
-<div id="finalMessage" class="hidden">
-
-<h1>Would you be my pretty princess? 👑</h1>
-
-</div>
+  <!-- Final Message -->
+  <div id="finalMessage">
+    <h1>It's you 🥰</h1>
+    <p>Would you be my pretty princess 👑💖</p>
+  </div>
 
 </div>
 
 <script src="script.js"></script>
-
 </body>
 </html>
