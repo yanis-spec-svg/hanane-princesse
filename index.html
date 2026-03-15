@@ -1,70 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Princess Garden</title>
+
 <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
 
 <div class="container">
 
-  <!-- === الترحيب === -->
-  <div id="welcome" class="fade">
-    <h1>Welcome to the Princess Garden 🌸💖</h1>
-    <button onclick="next('riddle1')">Next</button>
-  </div>
+<!-- الصفحة الأولى -->
+<div id="welcome">
 
-  <!-- === الألغاز الثلاثة === -->
-  <div id="riddle1" class="hidden">
-    <h2>I have a riddle for you 🍫</h2>
-    <p>First clue: This thing has made me smile a lot recently 😊</p>
-    <button onclick="next('riddle2')">Second clue</button>
-  </div>
+<h1>Welcome to the Princess Garden 🌸</h1>
 
-  <div id="riddle2" class="hidden">
-    <p>Second clue: This thing is not a place or something I own 🏠</p>
-    <button onclick="next('riddle3')">Third clue</button>
-  </div>
-
-  <div id="riddle3" class="hidden">
-    <p>Third clue: This thing loves surprises and chocolate 🍫💝</p>
-    <button id="showAnswerBtn">Show the answer</button>
-  </div>
-
-  <!-- === الهدية === -->
-  <div id="gift" class="hidden">
-    <div id="giftBox">🎁</div>
-    <p>Tap to open 🎀</p>
-  </div>
-
-  <!-- === الرسالة الكبيرة === -->
-  <div id="message" class="hidden">
-    <h2>It's You! 🥰</h2>
-    <p>You were just a stranger at first, someone I barely noticed. Then we talked, and somehow you felt familiar, like you had always been around. Slowly, I started sharing little pieces of myself I usually keep to myself, and you listened. You became someone I look forward to talking to, someone who brightens my days without even trying. And before I realized it, I started feeling something more than friendship—a warm admiration that keeps growing every time we talk. It's amazing how someone can quietly enter your life and make it feel brighter. I just wanted you to know... I like you, and I really enjoy having you in my life.</p>
-    <button id="promisesBtn">My Four Promises</button>
-  </div>
-
-  <!-- === الوعود === -->
-  <div id="promises" class="hidden">
-    <ol>
-      <li>I will always respect you ❤️</li>
-      <li>I will never ignore you 💖</li>
-      <li>I will always take care of you 🌸</li>
-      <li>I will always be there for you 🥰</li>
-    </ol>
-    <button id="sooBtn">Soo...</button>
-    <p>Press here 👇</p>
-  </div>
-
-  <!-- === الرسالة الأخيرة === -->
-  <div id="finalMessage" class="hidden">
-    <h1>Would you be my pretty princess? 👑💖</h1>
-  </div>
+<button onclick="next('riddle')">Next</button>
 
 </div>
 
+
+<!-- صفحة اللغز -->
+<div id="riddle" class="hidden">
+
+<h2>I have a riddle for you 🤔</h2>
+
+<p id="clueText"></p>
+
+<button onclick="showClue()">First clue</button>
+
+<button onclick="showClue()">Second clue</button>
+
+<button onclick="showClue()">Third clue</button>
+
+<br><br>
+
+<button id="showAnswerBtn">Show the answer</button>
+
+</div>
+
+
+<!-- الهدية -->
+<div id="gift" class="hidden">
+
+<div class="giftBox" onclick="next('message')">
+🎁
+<p>Tap to open</p>
+</div>
+
+</div>
+
+
+<!-- الرسالة -->
+<div id="message" class="hidden">
+
+<h1>it's you 🥰</h1>
+
+<p>
+You were just a stranger at first, someone I barely noticed.
+Then we talked, and somehow you felt familiar,
+like you had always been around.
+
+Slowly, I started sharing little pieces of myself
+I usually keep to myself, and you listened.
+
+You became someone I look forward to talking to,
+someone who brightens my days without even trying.
+
+And before I realized it,
+I started feeling something more than friendship —
+a warm admiration that keeps growing every time we talk.
+
+It's amazing how someone can quietly enter your life
+and make it feel brighter.
+
+I just wanted you to know...
+I like you, and I really enjoy having you in my life. 💖
+</p>
+
+<button onclick="next('promises')">My four promises</button>
+
+</div>
+
+
+<!-- الوعود -->
+<div id="promises" class="hidden">
+
+<h2>My promises 💌</h2>
+
+<p>I will always respect you</p>
+<p>I will never ignore you</p>
+<p>I will always take care of you</p>
+<p>I will always be there for you</p>
+
+<br>
+
+<button id="sooBtn">Soo... 👆</button>
+
+<p>Press here</p>
+
+</div>
+
+
+<!-- الرسالة الأخيرة -->
+<div id="finalMessage" class="hidden">
+
+<h1>Would you be my pretty princess? 👑</h1>
+
+</div>
+
+</div>
+
+
 <script src="script.js"></script>
+
 </body>
 </html>
