@@ -6,8 +6,6 @@ font-family:Arial;
 
 text-align:center;
 
-/* ضع هنا رابط خلفية الحديقة */
-
 background-image:url("https://w0.peakpx.com/wallpaper/812/190/HD-wallpaper-spring-field-nature-spring-tulips-field.jpg");
 
 background-size:cover;
@@ -19,27 +17,16 @@ background-position:center;
 
 
 .container{
-
 width:80%;
-
 max-width:700px;
-
 min-height:420px;
-
 margin:auto;
-
 margin-top:80px;
-
 padding:30px;
-
 background:#EDE3CF;
-
 border-radius:20px;
-
 position:relative;
-
 color:black;
-
 }
 
 
@@ -54,7 +41,7 @@ display:none;
 
 button{
 
-padding:10px 20px;
+padding:12px 20px;
 
 font-size:16px;
 
@@ -82,7 +69,7 @@ background:#ff8fb1;
 
 .giftBox{
 
-font-size:80px;
+font-size:100px;
 
 cursor:pointer;
 
@@ -98,6 +85,8 @@ top:-50px;
 
 animation:fall linear infinite;
 
+pointer-events:none;
+
 }
 
 
@@ -106,7 +95,7 @@ animation:fall linear infinite;
 
 0%{
 
-transform:translateY(0);
+transform:translateY(-50px);
 
 }
 
