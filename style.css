@@ -1,110 +1,66 @@
-body{
-
-margin:0;
-
-font-family:Arial;
-
-text-align:center;
-
-background-image:url("https://w0.peakpx.com/wallpaper/812/190/HD-wallpaper-spring-field-nature-spring-tulips-field.jpg");
-
-background-size:cover;
-
-background-position:center;
-
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url('https://w0.peakpx.com/wallpaper/812/190/HD-wallpaper-spring-field-nature-spring-tulips-field.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
 }
 
-
-
-.container{
-width:80%;
-max-width:700px;
-min-height:420px;
-margin:auto;
-margin-top:80px;
-padding:30px;
-background:#EDE3CF;
-border-radius:20px;
-position:relative;
-color:black;
+.container {
+  background: #EDE3CF;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  max-width: 600px;
+  width: auto;
+  text-align: center;
+  position: relative;
 }
 
-
-
-.hidden{
-
-display:none;
-
+.container > div {
+  display: none;
 }
 
-
-
-button{
-
-padding:12px 20px;
-
-font-size:16px;
-
-border:none;
-
-border-radius:10px;
-
-background:pink;
-
-cursor:pointer;
-
-margin:5px;
-
+.container > div.active {
+  display: block;
 }
 
-
-
-button:hover{
-
-background:#ff8fb1;
-
+button {
+  padding: 12px 24px;
+  font-size: 18px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  margin-top: 15px;
+  background: linear-gradient(45deg, #ff7eb3, #ff758c);
+  color: white;
 }
 
-
-
-.giftBox{
-
-font-size:100px;
-
-cursor:pointer;
-
+#answerFrame {
+  position: relative;
+  width: 100%;
+  max-width: 400px;  /* إطار أكبر قليلا للزر */
+  height: 150px;
+  margin: 20px auto 0 auto;
+  border-radius: 20px;
+  background: #F8EDEB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.falling {
+  position: absolute;
+  width: 25px;
+  animation: fall linear infinite;
+  z-index: 0;
+  opacity: 0.9;
 }
 
-
-
-.falling{
-
-position:fixed;
-
-top:-50px;
-
-animation:fall linear infinite;
-
-pointer-events:none;
-
+@keyframes fall {
+  0% {top:-50px;} 
+  100% {top:100vh;} 
 }
-
-
-
-@keyframes fall{
-
-0%{
-
-transform:translateY(-50px);
-
-}
-
-100%{
-
-transform:translateY(110vh);
-
-}
-
-}
-
-
