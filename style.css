@@ -1,112 +1,121 @@
-/* ==============================
-   CSS لموقع Princess Garden
-   ============================== */
+body{
 
-/* الجسم والخلفية */
-body {
-  margin:0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: url('https://w0.peakpx.com/wallpaper/812/190/HD-wallpaper-spring-field-nature-spring-tulips-field.jpg') center/cover no-repeat;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
+margin:0;
 
-/* المستطيل الرئيسي */
-.container {
-  width: 90%;
-  max-width: 750px;
-  min-height: 500px;
-  padding: 40px;
-  background: #EDE3CF;
-  border-radius: 20px;
-  text-align: center;
-  color: black;
-  position: relative;
+font-family:Arial;
+
+text-align:center;
+
+/* ضع هنا رابط خلفية الحديقة */
+
+background-image:url("https://w0.peakpx.com/wallpaper/812/190/HD-wallpaper-spring-field-nature-spring-tulips-field.jpg");
+
+background-size:cover;
+
+background-position:center;
+
 }
 
-/* إخفاء العناصر */
-.hidden { display: none; }
 
-/* تأثير Fade عند الظهور */
-.fade {
-  animation: fade 1s;
-}
-@keyframes fade {
-  from {opacity:0; transform:translateY(20px);}
-  to {opacity:1; transform:translateY(0);}
-}
 
-/* الأزرار */
-button {
-  padding: 14px 28px;
-  font-size: 18px;
-  border-radius: 15px;
-  border: none;
-  cursor: pointer;
-  margin-top: 15px;
-  background: linear-gradient(45deg,#ff7eb3,#ff758c);
-  color: white;
-  box-shadow:0 4px 15px rgba(0,0,0,0.3);
-  transition: 0.3s;
-   #showAnswerBtn{
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-}
-}
-button:hover {
-  transform: scale(1.1);
-  box-shadow:0 6px 20px rgba(0,0,0,0.4);
+.container{
+
+width:80%;
+
+max-width:700px;
+
+min-height:420px;
+
+margin:auto;
+
+margin-top:80px;
+
+padding:30px;
+
+background:#EDE3CF;
+
+border-radius:20px;
+
+position:relative;
+
+color:black;
+
 }
 
-/* العناصر المتساقطة (زهور وقلوب) */
-.falling {
-  position: absolute;
-  pointer-events: none;
-  z-index: 1;
+
+
+.hidden{
+
+display:none;
+
 }
 
-/* الرسالة الكبيرة */
-#message p {
-  font-size: 18px;
-  line-height: 1.6;
-  margin-top: 20px;
-  text-align: justify;
+
+
+button{
+
+padding:10px 20px;
+
+font-size:16px;
+
+border:none;
+
+border-radius:10px;
+
+background:pink;
+
+cursor:pointer;
+
+margin:5px;
+
 }
 
-/* الوعود */
-#promises ol {
-  margin-top: 20px;
-  text-align: left;
-  font-size: 18px;
+
+
+button:hover{
+
+background:#ff8fb1;
+
 }
 
-/* الهدية */
-#giftBox {
-  font-size: 120px;
-  cursor: pointer;
-  margin-top: 20px;
-}
-/* سقوط الزهور */
-.falling {
-  position: fixed;
-  top: -50px;
-  pointer-events: none;
-  z-index: 1;
-  animation: fall linear infinite;
+
+
+.giftBox{
+
+font-size:80px;
+
+cursor:pointer;
+
 }
 
-/* حركة السقوط */
-@keyframes fall {
-  0% {
-    transform: translateY(-50px);
-  }
-  100% {
-    transform: translateY(110vh);
-  }
+
+
+.falling{
+
+position:fixed;
+
+top:-50px;
+
+animation:fall linear infinite;
+
+}
+
+
+
+@keyframes fall{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+100%{
+
+transform:translateY(110vh);
+
+}
+
 }
 
 
