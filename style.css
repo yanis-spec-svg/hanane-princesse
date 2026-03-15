@@ -42,9 +42,9 @@ button {
 
 #answerFrame {
   position: relative;
-  width: 100%;
-  max-width: 400px;  /* إطار أكبر قليلا للزر */
-  height: 150px;
+  width: 120%;
+  max-width: 520px;  /* إطار أكبر قليلا للزر */
+  height: 2200px;
   margin: 20px auto 0 auto;
   border-radius: 20px;
   background: #F8EDEB;
