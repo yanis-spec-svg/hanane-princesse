@@ -42,7 +42,7 @@ button {
 
 #answerFrame {
   position: relative;
-  width: 120%;
+  width: 100%;
   max-width: 520px;  /* إطار أكبر قليلا للزر */
   height: 220px;
   margin: 20px auto 0 auto;
